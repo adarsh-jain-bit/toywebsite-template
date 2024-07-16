@@ -1,0 +1,778 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+}
+body{
+overflow-x: hidden;
+}
+:root{
+    --orange:#ff7800;
+    --blue:#16114e;
+    --cyan :#48dbfb;
+    --black: #1e272e;
+    --danger:#ff6f69 ;
+}
+.heading{
+    font-size: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:focus{
+    box-shadow: none!important;
+}
+.btn-self{
+   border-radius: .5rem !important;
+    color: var(--orange)!important;
+    cursor: pointer;
+}
+.btn-self:hover{
+    background-color: var(--cyan)!important;
+    color: white;
+}
+.orange{
+    background-color: var(--orange)!important;
+}
+.cyan{
+    background-color: var(--cyan)!important;
+}
+.black{
+background-color: var(--black)!important;
+}
+
+/* navbar css */
+#navbar-page{
+    background: var(--cyan);
+   
+    
+}
+.navbar{
+    z-index: 10!important;
+}
+.search{
+    position: relative;
+    right: 35px;
+}
+.search:hover{
+    background-color: var(--cyan)!important;
+}
+#envelope{
+    background-color: white;
+    padding: 10px;
+    color: #ff7800!important;
+    border-radius: 50%;
+}
+#email{
+    color: var(--orange);
+  position:absolute;
+ left: 81%;
+ background-color: white!important;
+ z-index: 10000!important;
+ opacity: 0;
+  transition: 0.5s;
+}
+#email.active{
+    left: 81%;
+    position: absolute;
+    opacity: 1;
+}
+.envelope:hover{
+    background-color: var(--cyan)!important;
+    color: white!important;
+}
+.basket{
+    position: relative;
+    right: 140px;
+    color: white;
+}
+.dropdown-menu{
+    position: absolute;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: translate3d(-153px, 42px, 0px)!important;
+    width: 265px!important;
+}
+.dropdown-toggle{
+    background-image: none!important;
+}
+.owl-prev {
+    position: absolute!important;
+    z-index: 10000!important;
+    background: var(--cyan)!important;
+    top: 60%;
+    left: 2%;
+    border-radius: 50%!important;
+}
+.owl-next{
+    position: absolute;
+    z-index: 10000!important;
+    background: var(--cyan)!important;
+    top: 60%;
+    right: 2%;
+    border-radius: 50%!important;
+}
+#carousel{
+    position: absolute;
+    top: 46px;
+    left: 100px;
+    z-index: 2;
+   
+}
+#carousel-first{
+    box-shadow: 1px 1px 5px rgb(105, 105, 105);
+}
+
+
+.nav2{
+    width: 85%;
+    position: absolute!important;
+    left: 90px;
+}
+.nav2::before{
+    content: "";
+    position: absolute;
+    left: 4px;
+    border: 10px solid #8f8f8f;
+    border-left: 17px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 0;
+    bottom: -10px;
+    z-index: -1;
+}
+.nav2::after{
+    content: "";
+    position: absolute;
+    right: 7px;
+    border: 10px solid #8f8f8f;
+    border-left: 0px solid transparent;
+    border-right: 17px solid transparent;
+    border-bottom: 0;
+    bottom: -10px;
+    z-index: -1;
+}
+.navbar-toggler{
+    border: none!important;
+    padding: 0!important;
+    font-size: 16px!important;
+}
+.paragraph .p1{
+    font-size: 2.8rem!important;
+    }
+     .paragraph .p2{
+    font-size: 3.5rem!important;
+    }
+     .paragraph .p3{
+    font-size: 1.5rem!important;
+    }
+.paragraph{
+    z-index: 10!important;
+    position: absolute;
+    left: 50%;
+    top: 17rem;
+}
+ .paragraph2 .p1{
+font-size: 2.8rem!important;
+}
+ .paragraph2 .p2{
+font-size: 3.5rem!important;
+}
+ .paragraph2 .p3{
+font-size: 1.5rem!important;
+}
+.paragraph2{
+    z-index: 10!important;
+    position: absolute;
+    left: 10%;
+    top: 17rem;
+}
+.owl-item{
+    position: relative!important;
+}
+.nav-item a{
+    font-size: 20px!important;
+    color: var(--black);
+    padding: 10px 20px;
+    position: relative;
+    padding: 5px 20px;
+    z-index: 1000;
+}
+.nav-item a::after{
+content: "";
+position: absolute;
+bottom: -10px;
+left: 0;
+height: 5px;
+width: 0%;
+color: white;
+z-index: 100;
+transition: 0.5s;
+
+}
+
+.nav-item a:hover::after{
+    background-color: var(--orange);
+    border-radius: 30px;
+   color: white!important;
+   width: 100%!important;
+ 
+}
+@media (max-width:1200px) {
+    .paragraph{
+        top: 13rem;
+        left: 50%;
+    }
+.paragraph2{
+    top: 13rem;
+}
+}
+@media (max-width:1000px) {
+    .search-input{
+        display: none!important;
+    }
+    #carousel{
+        position: absolute;
+        top: 46px;
+        left: 50px;
+        z-index: 2;
+       
+    }
+    .nav2{
+       position: relative!important;
+    }
+    .search{
+        position: relative;
+        left: 15px;
+    }
+    .basket{
+        position: relative;
+        right: 10px;
+        color: var(--orange);
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    .basket:hover{
+        background-color: var(--cyan)!important;
+        color: white!important;
+    }
+    .nav2::after{
+        display: none;
+    }
+    .nav2::before{
+        display: none;
+    }
+    .paragraph{
+        z-index: 10!important;
+        position: absolute;
+        left: 50%;
+        top: 8rem;
+    }
+    .paragraph2{
+        z-index: 10!important;
+        position: absolute;
+        left: 10%;
+        top: 8rem;
+    }
+    #carousel{
+        position:relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+       
+    }  
+    .basket{
+        position: relative;
+        right: 0px;
+        color: var(--orange);
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    .logo{
+        height: 50px!important;
+    }
+    .head-nav{
+        background-color: var(--cyan);
+    }
+    #navbar-page{
+        background: white;
+        
+        z-index: -2;
+    }
+    .paragraph .p1{
+        font-size: 2.5rem!important;
+        }
+         .paragraph .p2{
+        font-size: 3rem!important;
+        }
+         .paragraph .p3{
+        font-size: 1.2rem!important;
+        }
+        .paragraph2 .p1{
+            font-size: 2.5rem!important;
+            }
+             .paragraph2 .p2{
+            font-size: 3rem!important;
+            }
+             .paragraph2 .p3{
+            font-size: 1.2rem!important;
+            }
+}
+
+
+@media (max-width:764px) {
+    .search{
+        position: relative;
+        left: 10px;
+    }
+    .paragraph2{
+        z-index: 10!important;
+        position: absolute;
+        left: 10%;
+        top: 4rem;
+    }
+    .paragraph{
+        z-index: 10!important;
+        position: absolute;
+        left: 50%;
+        top: 4rem;
+    }
+    .paragraph .p1{
+        font-size: 1.5rem!important;
+        }
+         .paragraph .p2{
+        font-size: 2rem!important;
+        }
+         .paragraph .p3{
+        font-size: 0.8rem!important;
+        }
+        .paragraph2 .p1{
+            font-size: 1.5rem!important;
+            }
+             .paragraph2 .p2{
+            font-size: 2rem!important;
+            }
+             .paragraph2 .p3{
+            font-size: 0.8rem!important;
+            }
+}
+@media (max-width:550px) {
+    .logo{
+        height: 40px!important;
+    }
+    .paragraph .p1{
+        font-size: 1rem!important;
+        }
+         .paragraph .p2{
+        font-size: 1.5rem!important;
+        }
+         .paragraph .p3{
+        font-size: 0.5rem!important;
+        }
+        .paragraph2 .p1{
+            font-size: 1rem!important;
+            }
+             .paragraph2 .p2{
+            font-size: 1.5rem!important;
+            }
+             .paragraph2 .p3{
+            font-size: 0.5rem!important;
+            }
+            #shopbtn{
+                font-size: 10px;
+    padding: 5px;
+            }
+            #shopbtn2{
+                font-size: 10px;
+    padding: 5px;
+            }
+}
+/* service section */
+.services{
+  position: relative;
+  top: 37rem;
+}
+/* product */
+.product{
+    margin-top: 70px;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    padding: 0px 16px;
+}
+.buttons a{
+    border: 1px solid gainsboro;
+    border-radius: 30px;
+}
+.buttons a:hover{
+    background-color: var(--cyan);
+    color:white;
+}
+#toy-icon{
+    position: relative!important;
+    bottom: 20px;
+    font-size: 20px;
+    gap: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  opacity: 0;
+   transition: 0.5s;
+}
+#toy-icon i:hover{
+    color: var(--orange)!important;
+   
+}
+#cart:hover #toy-icon{
+    transition: 0.5s;
+opacity: 1;
+}
+#cart:hover .card-footer{
+background-color: var(--orange)!important;
+color: white!important;
+transition: 0.5s;
+}
+#cart:hover span{
+    color: white!important;
+}
+#cart:hover p{
+    color: white!important;
+}
+.image-fix{
+    background: url(/arihant/bg1.webp);
+
+    background-position: center;
+    background-size: cover;
+    height: 150vh;
+    width: 100%;
+   background-attachment: fixed;
+}
+
+.zig-zag{
+    position: absolute;
+    top: 5.3rem;
+    left: 0;
+    z-index: 1000;
+
+}
+.zig-zag2{
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: -1px;
+}
+.image-fix-heading{
+    position: relative;
+    top: 45%;
+    color: white;
+    font-weight: bolder;
+ left: 4%;
+}
+.image-fix-btn{
+    position: relative;
+    top: 50%; 
+    left: 25%;
+}
+
+/* boy and girl hover and transform effect */
+.box{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.box img{
+    height: 100%;
+    width: 100%;
+}
+.box:hover img{
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+.box::after{
+    content: "";
+    background-color: var(--black);
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.1);
+  transition: 0.5s;
+}
+.box:hover::after{
+    height: 100%;
+    opacity: 0.3;
+    transition: 0.5s;
+  width: 100%;
+  transform: scale(1);
+}
+/* trendy kids toys */
+.boytoy{
+    background: url(/arihant/boytoy.webp);
+    background-position: center;
+    background-size: cover;
+   
+}
+.item-detail{
+    margin-top: 50px;
+}
+.boytoy-des{
+    position: relative;
+    top: 110px;
+    left: 10px;
+}
+
+#showicon i:hover{
+    color: var(--orange)!important;
+}
+.pilltype{
+    position: relative!important;
+    z-index: 4;
+    
+}
+.box-container{
+    overflow: hidden;
+}
+.pill-radius{
+    border-radius: 50px!important;
+}
+.pilltype::after{
+    position: absolute;
+    content: "";
+    height: 450px;
+    width: 40%;
+    background-color: white;
+    top: -25px;
+    right: 0;
+    opacity: 0.6;
+    z-index: 1;
+    border-radius: 50px;
+}
+.toy-img{
+    z-index: 10;
+}
+
+.mybutton{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .mybutton i:hover{
+    color: orange!important;
+    transition: 0.5s;
+  }
+  
+.showicon{
+    display: none;
+    
+}
+.showicon i:hover{
+    color: orange!important;
+    transition: 0.5s;
+   }
+   /* logo slider */
+   .swiper-button-prev::after{
+    content: ""!important;
+  }
+  .swiper-button-next::after{
+    content: ""!important;
+  }
+  
+/* one items */
+.Msize , .xlsize, .xllsize {
+    width: 50px;
+    height: 50px;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-self2{
+    width: 40%; 
+    padding: 10px 0px!important;
+    border-radius: 30px!important;
+    margin-bottom: 20px;
+    background-color: var(--cyan)!important;
+    color: white!important;
+  }
+  .btn-self2:hover{
+background-color: var(--danger)!important;
+  }
+  .fix-img{
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+/* countdown */
+#time{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  gap: 10px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.showtime{
+    height: 70px;
+    width: 80px;
+    background: linear-gradient(white, whitesmoke);
+    text-align: center;
+    font-size: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#time p{
+    color: gray;
+}
+#time span{
+font-size: 25px;
+}
+/* footer */
+  .footer{
+    background: url(/arihant/footer\ \(1\).webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   padding-top: 20px;
+   padding-bottom: 50px;
+   position: relative;
+  }
+  .footer::before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    background: url(/arihant/footer-pattern.png);
+    height: 22px;
+    width: 100%;
+  }
+
+  .footer h6{
+    color: var(--danger);
+    font-size: 20px!important;
+  }
+  
+@media (max-width:991px) {
+    .boytoy{
+        height: 400px;
+        width: 100%;
+    }
+    .boytoy-des{
+        position: relative;
+        top: 70px;
+        left: 10px;
+    }
+    .pilltype::after{
+        display: none!important;
+    }
+    .services{
+        position: relative;
+        top: 0rem;
+      }
+      .image-fix{
+        height: 100vh;
+        background-position: right;
+      }
+}
+
+
+@media (max-width:576px) {
+    .pill-radius{
+        border-radius: 25px!important;
+    }
+    .boytoy-des{
+        top: 37px;
+    left: 40px;
+    }
+    .swiper-button-next::after{
+        display: none!important;
+    }
+    .swiper-button-next::before{
+        display: none!important;
+    }
+    .swiper-button-prev{
+        display: none!important;
+    }
+    .swiper-button-next{
+        display: none!important;
+    }
+}
+/* hamburger */
+.dropdown .show{
+    inset: 0px 0px auto !important;
+}
+
+ .active{
+    animation: zoom-down-animation  0.8s linear !important;
+}
+
+@keyframes zoom-down-animation {
+    0%{
+opacity: 0;
+transform: translateY(-10%);
+    }
+    100%{
+opacity: 1;
+transform: translateY(0%);
+    }
+}
+#close-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+#close-btn.move{
+    transform: rotate(360deg);
+    transition: 1s;
+  
+}
+.email{
+   border-radius: 30px!important;
+   position: relative;
+   left:25px;
+  cursor: pointer;
+   
+}
+.email::placeholder{
+    color: gray!important;
+}
+
+#checkbox{
+    position: relative!important;
+    left: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-form{
+    background-color: rgb(201, 251, 253)!important;
+    z-index: 100000;
+    position: fixed;
+    padding: 40px 0px;
+    bottom: 0px;
+    width: 100%;
+    transition: 0.5s;
+    display: none;
+}
+ .formcontact{
+     position: fixed;
+     top: 100rem;
+     transition: 1s;
+}
+
+#basic{
+    position: relative;
+    z-index: 2000;
+    cursor: pointer;
+}
